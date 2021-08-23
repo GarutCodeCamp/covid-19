@@ -20,5 +20,15 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "linebreak-style":"off",
+        "import/extensions": "off",
+         "no-use-before-define":"off",
+         "indent":"off",
+         "comma-dangle":"off",
+         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+         "object-curly-newline":"off",
+         "import/no-unresolved":"off",
+         "react/jsx-indent":"off" ,
+         "no-param-reassign":"off"
     }
 }
