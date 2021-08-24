@@ -9,38 +9,46 @@ import { dataAPI } from '../../redux/dataApi';
 const Midtool = () => {
     const classes = useStyles();
     const dispatch = useAppDispatch();
-    const data = useAppSelector((state) => state.apis.data);
+    const data = useAppSelector((state) => state.apis.dataAPI[0]);
     React.useEffect(() => {
         getDataApi().then((api) => dispatch(dataAPI(api)));
     }, []);
-    console.log(data);
     return (
         <div className={classes.root}>
             <Card>
                 <Container>
-                    <Box display="flex">
-                        <Box display="flex" justifyContent="center" textAlign="center" flexDirection="column">
+                    <Box display="flex" justifyContent="center" width="500px">
+                        <Box display="flex" flexGrow={1} textAlign="center" flexDirection="column">
                             <CardContent>
                                 <OfflineBoltSharp color="primary" fontSize="large" />
                             </CardContent>
+                            <Typography variant="caption">
+                                Confirmed
+                            </Typography>
                             <Typography paragraph>
-                                999
+                                {data?.confirmed.value}
                             </Typography>
                         </Box>
-                        <Box display="flex" justifyContent="center" textAlign="center" flexDirection="column">
+                        <Box display="flex" flexGrow={1} textAlign="center" flexDirection="column">
                             <CardContent>
                                 <Archive color="primary" fontSize="large" />
                             </CardContent>
+                            <Typography variant="caption">
+                                Recovered
+                            </Typography>
                             <Typography paragraph>
-                                Confirmed
+                                {data?.recovered.value}
                             </Typography>
                         </Box>
-                        <Box display="flex" justifyContent="center" textAlign="center" flexDirection="column">
+                        <Box display="flex" flexGrow={1} textAlign="center" flexDirection="column">
                             <CardContent>
                                 <LocalHospital color="primary" fontSize="large" />
                             </CardContent>
+                            <Typography variant="caption">
+                                Death
+                            </Typography>
                             <Typography paragraph>
-                                999
+                                {data?.deaths.value}
                             </Typography>
                         </Box>
                     </Box>

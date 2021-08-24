@@ -17,15 +17,15 @@ export interface confirms{
     iso2: string;
 }
 export interface dataAPI{
-    confirmed?: object;
-    recovered: object;
-    deaths: object;
+    confirmed?: any;
+    recovered: any;
+    deaths: any;
     dailySummary: string;
-    dailyTimeSeries: object;
+    dailyTimeSeries: any;
     countries: string;
     image: string
 }
 export interface initialize{
     confirm?: confirms[];
-    data?: dataAPI[]
+    dataAPI: dataAPI[];
 }

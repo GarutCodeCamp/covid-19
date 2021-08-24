@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import { initialize } from '../interface';
 
 const Initialize: initialize = {
-    data: []
+    dataAPI: [],
 };
 
 const DataAPI = createSlice(
@@ -11,7 +11,7 @@ const DataAPI = createSlice(
         initialState: Initialize,
         reducers: {
             dataAPI: (state, action) => {
-                state.data = action.payload;
+                state.dataAPI[0] = action.payload;
             },
             clearData: () => Initialize
         }

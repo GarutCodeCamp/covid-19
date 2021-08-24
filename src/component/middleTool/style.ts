@@ -6,7 +6,7 @@ const useStyles = makeStyles((theme: Theme) => createStyles({
             width: '100%',
             justifyContent: 'center',
             position: 'relative',
-            margin: theme.spacing(-5)
+            margin: theme.spacing(-7, 0)
         },
     }));
 

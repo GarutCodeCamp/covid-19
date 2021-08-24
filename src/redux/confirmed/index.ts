@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 import { initialize } from '../interface';
 
 const Initialize: initialize = {
-    confirm: []
+    confirm: [],
+    dataAPI: []
 };
 
 const confirmed = createSlice(
